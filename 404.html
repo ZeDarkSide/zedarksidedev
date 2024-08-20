@@ -5,7 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/error.css">
+    
+    <style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body, html, * {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: translateY(-2px);
+}
+
+.menu-icon:hover span:nth-child(1) {
+    transform: translateY(-2px);
+}
+
+.menu-icon:hover span:nth-child(2) {
+    transform: translateY(2px);
+}
+
+.menu-icon:hover span:nth-child(3) {
+    transform: translateY(4px);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10px;
+    height: 100vh;
+}
+
+.error-section {
+    background-color: #2e2e2e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.error-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.home-link:hover {
+    background-color: #ff1a1a;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar a {
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    color: #ff4c4c;
+    background-color: #444;
+    padding-left: 32px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 60px;
+}
+    </style>
 </head>
 <body>
 
