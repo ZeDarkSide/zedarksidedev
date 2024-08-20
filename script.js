@@ -53,3 +53,10 @@ document.getElementById("back-to-top").addEventListener('touchend', function() {
     this.style.color = '#fff';
     this.blur(); // Ensure the button loses focus after touch
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.userSelect = 'none'; // Disable text selection
+    document.body.style.webkitUserSelect = 'none'; // For Safari
+    document.body.style.mozUserSelect = 'none'; // For Firefox
+    document.body.style.msUserSelect = 'none'; // For IE/Edge
+});

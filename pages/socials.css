@@ -4,7 +4,12 @@ body {
     background-color: #1e1e1e;
     color: #fff;
 }
-
+body, html, * {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+}
 .navbar {
     background-color: #333;
     padding: 15px;
