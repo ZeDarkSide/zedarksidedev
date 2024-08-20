@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/wiki.css">
+    <style>
+        /* Custom styling for the Discord link */
+        .discord-link {
+            display: inline-block;
+            background-color: #2e2e2e;
+            color: #ff4c4c;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .discord-link:hover {
+            background-color: #ff4c4c;
+            color: #ffffff;
+        }
+
+        .disclaimer {
+            font-size: 10px;
+            color: #cccccc;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            &#9776;
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="../../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../socials.html">Socials</a>
+        <a href="../Wikis.html">Wikis</a>
+    </div>
+
+    <div class="content">
+        <div class="main-content">
+            <div class="section">
+                <section id="introduction">
+                    <h1>About the Bot</h1>
+                    <p>
+                        Welcome to the wiki for our Discord bot! This bot is designed specifically for Destiny 2 players within our Discord server. 
+                        To make use of the bot, you must be a member of the server and an active player of Destiny 2. The bot offers a variety of 
+                        commands to assist with organizing raids, managing notifications, and more.
+                    </p>
+                    <p>
+                        If you're not already a member, you can join our Discord server by clicking the link below:
+                    </p>
+                    <p>
+                        <a href="https://discord.com/invite/SmjhBDETY6" target="_blank" class="discord-link">Join Our Discord Server</a>
+                        <span class="disclaimer">I am not the owner of this destiny server but I am a moderator.</span>
+
+                    </p>
+                </section>
+            </div>
+            
+            <div class="section">
+                <section id="raid-command">
+                    <h1>Raid Command Help</h1>
+                    <h2>Creating a Raid</h2>
+                    <p>Use the command `!!raid <alias> <startTime> <description>` to create a new raid with the specified alias, start time, and an optional description.</p>
+                    <p>Example: `!!raid vog <t:1721922000:f> Looking to complete this for once!`</p>
+                    <p>You can leave some fields empty for default values.</p>
+                    <p><strong>Aliases:</strong> crota, ron, vog, kf, lw, gos, vow, dsc, se</p>
+                    <h3>Getting the Start Time in the Correct Format:</h3>
+                    <ol>
+                        <li>Go to Discord Timestamps.</li>
+                        <li>Select the 'Long Date with Short Time' format.</li>
+                        <li>Copy the resulting timestamp and paste it as the startTime parameter.</li>
+                    </ol>
+                    <h2>Joining a Raid</h2>
+                    <p>Click the 'Join Raid' button on the raid post to join the raid.</p>
+                    <h2>Standby for a Raid</h2>
+                    <p>Click the 'Join Standby' button on the raid post to be added to the standby list.</p>
+                    <h2>Error Handling</h2>
+                    <p>The command will inform you if there are issues with the raid name or start time, and provide instructions to correct them.</p>
+                    <img src="../../images/dlWuAIq.png" >
+                </section>
+            </div>
+
+            <div class="section">
+                <section id="exe-command">
+                    <h1>Excision Command Menu</h1>
+                    <h2>Excision Grandmaster Command Overview</h2>
+                    <p>The `!!exe` command is used to schedule and manage Excision Grandmaster (GM) raids. This command allows you to create a new Excision GM event with a specified start time and description.</p>
+                    <p>Example: `!!exe <t:1721922000:f> Looking to complete this for once!`</p>
+                    <h3>Start Time Format:</h3>
+                    <ol>
+                        <li>Ensure the start time is formatted as <t:unix_timestamp:f>. For example, <t:1721922000:f>.</li>
+                        <li>To get the correct Unix timestamp format, visit Discord Timestamps.</li>
+                        <li>Select 'Long Date with Short Time' as the type.</li>
+                        <li>Copy the resulting timestamp and paste it as the startTime parameter.</li>
+                    </ol>
+                    <h2>Error Handling:</h2>
+                    <p>Ensure the start time is in the correct format: `<t:unix_timestamp:f>`. Double-check that you have selected 'Long Date with Short Time'.</p>
+                    <p>The command will provide error messages if the format is incorrect or if any issues occur during execution.</p>
+                    <h2>Message Components:</h2>
+                    <p>The Excision GM post will include buttons to join the raid, join standby, or delete the raid. The post will also display the start time, description, and the number of slots available for joining and standby.</p>
+                    <img src="../../images/WcEFU2R.png" alt="image">
+                </section>
+            </div>
+
+            <div class="section">
+                <section id="ping-command">
+                    <h1>Ping Command Menu</h1>
+                    <h2>Ping Commands Overview</h2>
+                    <h3>!!join-ping</h3>
+                    <p>Notifies users who have joined a raid. Use this command in reply to the raid post.</p>
+                    <p>Example: `!!join-ping Ready for the raid!`</p>
+                    <h3>!!standby-ping</h3>
+                    <p>Notifies users who are on standby for a raid. Use this command in reply to the raid post.</p>
+                    <p>Example: `!!standby-ping There’s a spot available!`</p>
+                    <h2>Steps to Use:</h2>
+                    <ol>
+                        <li>Reply to the specific raid post message where you want to notify users.</li>
+                        <li>Use the command `!!join-ping` or `!!standby-ping` and include a message if desired.</li>
+                    </ol>
+                    <p>The command will delete the original command message and send a notification with the specified message (if any) to the users mentioned in the "Join Slots" or "Standby Slots" field of the raid post.</p>
+                </section>
+            </div>
+
+            <div class="section">
+                <section id="modifications-command">
+                    <h1>Modifications Command Menu</h1>
+                    <h2>Modifications Commands Overview</h2>
+                    <h3>!!change-time</h3>
+                    <p>Updates the start time of an existing raid post. This command is useful for adjusting the schedule of a raid event.</p>
+                    <p>Example: `!!change-time <t:1721924000:f>`</p>
+                    <h2>Steps to Use:</h2>
+                    <ol>
+                        <li>Reply to the specific raid post message you want to modify.</li>
+                        <li>Provide the new start time using the format `<t:unix_timestamp:f>`.</li>
+                    </ol>
+                    <p>Ensure that you are the creator of the raid post and that it contains an embed.</p>
+                </section>
+            </div>
+
+            <div class="section">
+                <section id="raid-aliases">
+                    <h1>Raid Aliases</h1>
+                    <ul>
+                        <li><strong>crota</strong> - Crota's End</li>
+                        <li><strong>ron</strong> - Root of Nightmares</li>
+                        <li><strong>vog</strong> - Vault of Glass</li>
+                        <li><strong>kf</strong> - Kings Fall</li>
+                        <li><strong>lw</strong> - Last Wish</li>
+                        <li><strong>gos</strong> - Garden of Salvation</li>
+                        <li><strong>vow</strong> - Vow of the Disciple</li>
+                        <li><strong>dsc</strong> - Deep Stone Crypt</li>
+                        <li><strong>se</strong> - Salvation's Edge</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="section">
+                <section id="credits">
+                    <h1>Credits</h1>
+                    <p>Special thanks to all the members of our discord who helped test and bring this bot to life!</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="index">
+            <h2>Index</h2>
+            <ul>
+                <li><a href="#introduction">About the Bot</a></li>
+                <li><a href="#raid-command">Raid Command</a></li>
+                <li><a href="#exe-command">Excision Command</a></li>
+                <li><a href="#ping-command">Ping Commands</a></li>
+                <li><a href="#modifications-command">Modifications Command</a></li>
+                <li><a href="#raid-aliases">Raid Aliases</a></li>
+                <li><a href="#credits">Credits</a></li>
+            </ul>
+        </div>
+
+
+<!-- Back to Top Button -->
+<div id="back-to-top" onclick="scrollToTop()">&#8679;</div>
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>

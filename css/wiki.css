@@ -1,0 +1,270 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1002;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: translateY(-2px);
+}
+
+.menu-icon:hover span:nth-child(1) {
+    transform: translateY(-2px);
+}
+
+.menu-icon:hover span:nth-child(2) {
+    transform: translateY(2px);
+}
+
+.menu-icon:hover span:nth-child(3) {
+    transform: translateY(4px);
+}
+
+.content {
+    display: flex;
+    padding: 80px 10px;
+    justify-content: space-between;
+}
+
+.main-content {
+    width: 70%;
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.index {
+    width: 250px; /* Adjust width as necessary */
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+    position: fixed; /* Fixes the index in place */
+    top: 80px; /* Keeps it 80px from the top of the viewport */
+    right: 10px; /* Position it on the right side, adjust as necessary */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+
+.index h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.index ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.index ul li {
+    margin-bottom: 10px;
+}
+
+.index ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.index ul li a:hover {
+    color: #ff4c4c;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar a {
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    color: #ff4c4c;
+    background-color: #444;
+    padding-left: 32px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 60px;
+}
+
+.section {
+    background-color: #2e2e2e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column-reverse; /* Reverses the order of content */
+        padding: 60px 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .index {
+        width: 100%;
+        position: relative; /* Change position from sticky to relative for mobile */
+        top: 0;
+        margin-bottom: 20px; /* Add margin-bottom to separate it from main content */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .sidebar a {
+        font-size: 20px;
+    }
+
+    .sidebar .closebtn {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    outline: none; /* Remove focus outline */
+    -webkit-tap-highlight-color: transparent; /* Remove highlight on mobile devices */
+    touch-action: manipulation; /* Prevent default touch actions */
+}
+
+#back-to-top:hover {
+    background-color: #ff4c4c;
+}
+
+#back-to-top:focus,
+#back-to-top:active {
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    transition: none; /* Disable transitions */
+}
+
+#back-to-top:active {
+    background-color: #333 !important; /* Prevent active state from changing color */
+    color: #fff !important;
+}
+
+
+.footer {
+    background-color: #333; /* Match this with your navbar or another dark color */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; /* This will keep the footer at the bottom of the page */
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.6); /* Optional shadow for depth */
+    font-size: 14px;
+}
+
