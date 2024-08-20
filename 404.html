@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="error.css">
+</head>
+<body>
+
+
+    <div class="content">
+        <div class="error-section">
+            <h1>404 - Page Not Found</h1>
+            <p id="funny-text"></p>
+            <a href="../../index.html" class="home-link">Go Back Home</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const funnyTexts = [
+            "Looks like you've stumbled into the void. Careful, it’s dark here.",
+            "This page is missing, just like my sanity after debugging for 8 hours.",
+            "Oops! The page you’re looking for went on vacation.",
+            "This isn't the page you’re looking for. Move along.",
+            "404 Error: Page not found. But hey, at least you found this cool message!",
+            "Our servers are probably in a raid right now. Try again later.",
+            "Well, this is awkward... The page is gone, but your curiosity isn't.",
+            "Whoops! This page has been lost in the matrix.",
+            "You took a wrong turn, but it’s not the end of the world… just this page.",
+            "The page you’re looking for isn’t here, but the adventure continues!",
+            "Congratulations, you’ve found the secret page! Just kidding, it’s still a 404.",
+            "It’s not you, it’s the page. It’s just not here anymore.",
+            "You’ve reached a page that isn’t here... kind of like a ghost town, but on the internet.",
+            "Sorry, this page is currently playing hide and seek. And it’s winning.",
+            "Well, this is embarrassing. We seem to have misplaced this page.",
+            "Looks like you’ve found a page that time forgot. And so did we.",
+            "This page went out for coffee and never came back.",
+            "This page is as lost as I am in a Destiny 2 raid.",
+            "The page you’re looking for isn’t here, but don’t worry, there’s still plenty of internet left to explore!",
+            "We’d tell you a joke, but the punchline is that this page is missing."
+        ];
+
+        document.getElementById('funny-text').textContent = funnyTexts[Math.floor(Math.random() * funnyTexts.length)];
+    </script>
+</body>
+</html>
